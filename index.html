@@ -14,38 +14,43 @@
     .attribution a { color: hsl(228, 45%, 44%); }
     .inputbar1{
       height: 35px;
-      width: 250px;
+      width: 323px;
       border-radius: 5px;
-      border: 1px solid rgba(10, 235, 160, 0.464);
+      border: 1px solid black;
+      margin-right: 10px;
+      margin-top: 8px;
     }
     .inputbar2 {
       height: 35px;
-      width: 95%;
+      width: 97%;
       border-radius: 5px;
-      border: 1px solid rgba(10, 235, 160, 0.464);
+      border: 1px solid black;
+      margin-top: 8px;
     }
     .inputbar3 {
       height: 12px;
       width: 12px;
-      border-radius: 10px;
-      border:1px solid rgba(10, 235, 160, 0.464);
+      border-radius: 5px;
     }
     body{
       background-color: rgba(10, 235, 160, 0.464);
     }
-    .container{
+    .container1 {
       width: 50%;
-      height: 500px;
+      height: 570px;
       background-color: white;
       margin-left: auto;
       margin-right: auto;
       border-radius: 10px;
+      padding: 20px;
+      margin-top: 50px;
+      
     }
     .btn{
       background-color: green;
       color: white;
-      height: 25px;
-      width: 500px;
+      height: 35px;
+      width: 97%;
       border-radius: 5px;
       margin-left: auto;
       margin-right: auto;
@@ -53,39 +58,57 @@
     }
     .name {
       display: flex;
-      justify-content: space-between;
+      
+      
 
     }
-    .query{
-      border: 2px solid rgba(10, 235, 160, 0.464);
-      height: 20px;
-      width: 250px;
+    .query {
+      border: 1px solid black;
+      height: 30px;
+      width: 323px;
+      margin: 5px;
+      border-radius: 5px;
+      padding-top: 10px;
+      margin-top: 8px;
+      
+      
+    }
+    .email {
+      margin-top: 20px;
+    }
+    a {
+       text-decoration: none;
+       color: rgba(10, 235, 160, 0.552);
+    }
+    .msg {
+      border-radius: 5px;
+      margin-top: 8px;
       
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container1">
 
   
   <form action="">
     <h1>Contact Us</h1>
     <div class="name ">
       <div>
-        <label for="">First Name *</label><br>
+        <label for="">First Name <a href=""> *</a></label><br>
         <input type="text" name="" id=""required class=" inputbar1"><br> 
       </div>
       <div>
-        <label for="">Last Name *</label><br>
+        <label for="">Last Name <a href=""> *</a></label><br>
         <input type="text" name="" id="" required  class="inputbar1"><br>
       </div>
     </div>  
-        <div>
-          <label for="">Email Address *</label><br>
+        <div class="email">
+          <label for="">Email Address <a href=""> *</a></label><br>
           <input type="email" name="" id="" required class="inputbar2"><br>
         </div>
-      <div>
-        <label for="">Query Type *</label><br>
+      <div class="email">
+        <label for="">Query Type <a href=""> *</a></label><br>
         <div style="display: flex;">
             <div class="query">
                 <input type="radio" name="" id="" value="General Enquiry" class="inputbar3"> General Inquiry
@@ -96,14 +119,17 @@
               </div>
           </div>  
       
-      <div>
-        <label for="">Message *</label><br>
-        <textarea name="" id="" rows="5" cols="80"></textarea><br>
+      <div class="email">
+        <label for="" >Message <a href=""> *</a> </label><br>
+        <textarea name="" id="" rows="5" cols="88" class="msg"></textarea><br>
       </div>
-      <div>
-        <input type="checkbox" name="" id="">I consent to being contacted by the team <br>
+      <div class="email">
+        <input type="checkbox" name="" id="">I consent to being contacted by the team <a href=""> *</a> <br>
       </div>
-      <button type="submit" class="btn">Submit</button>
+      <div class="email">
+       
+        <button type="submit" class="btn">Submit</button>
+      </div>
   </form>
 </div>
   <div class="attribution">
