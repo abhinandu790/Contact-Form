@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -13,12 +13,14 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     .inputbar1{
-      height: 35px;
-      width: 323px;
+      height: 30px;
+      max-width: 250px;
+      width: 100%;
       border-radius: 5px;
       border: 1px solid black;
       margin-right: 10px;
       margin-top: 8px;
+   
     }
     .inputbar2 {
       height: 35px;
@@ -36,8 +38,8 @@
       background-color: rgba(10, 235, 160, 0.464);
     }
     .container1 {
-      width: 50%;
-      height: 570px;
+     max-width: 50%;
+      min-height: 570px;
       background-color: white;
       margin-left: auto;
       margin-right: auto;
@@ -60,16 +62,19 @@
       display: flex;
       
       
+      
 
     }
     .query {
       border: 1px solid black;
       height: 30px;
-      width: 323px;
+      max-width: 250px;
       margin: 5px;
       border-radius: 5px;
-      padding-top: 10px;
+      
       margin-top: 8px;
+      padding-top: auto;
+      padding-bottom: auto;
       
       
     }
@@ -83,58 +88,69 @@
     .msg {
       border-radius: 5px;
       margin-top: 8px;
+      max-width: 100%;
+      
+    }
+    input:hover, textarea:hover, button:hover ,.query:hover {
+      border: 1px solid rgba(10, 235, 160, 0.552);
+      box-shadow: 0 0 5px rgba(10, 235, 160, 0.552);
       
     }
   </style>
 </head>
 <body>
-  <div class="container1">
+  <div class="container">
+      <div class="row">
+        <div class="container1 ">
+          
 
-  
-  <form action="">
-    <h1>Contact Us</h1>
-    <div class="name ">
-      <div>
-        <label for="">First Name <a href=""> *</a></label><br>
-        <input type="text" name="" id=""required class=" inputbar1"><br> 
-      </div>
-      <div>
-        <label for="">Last Name <a href=""> *</a></label><br>
-        <input type="text" name="" id="" required  class="inputbar1"><br>
-      </div>
-    </div>  
-        <div class="email">
-          <label for="">Email Address <a href=""> *</a></label><br>
-          <input type="email" name="" id="" required class="inputbar2"><br>
-        </div>
-      <div class="email">
-        <label for="">Query Type <a href=""> *</a></label><br>
-        <div style="display: flex;">
-            <div class="query">
-                <input type="radio" name="" id="" value="General Enquiry" class="inputbar3"> General Inquiry
-              </div>
-              <div class="query">
-                <input type="radio" name="" id="" value="Support Request" class="inputbar3"> Support Request <br>
-              </div>
-              </div>
+        
+        <form action="">
+          <h1>Contact Us</h1>
+          <div class="name  flex-md-column flex-sm-column flex-lg-row">
+            <div class="col-md-6  ">
+              <label for="">First Name <a href=""> *</a></label><br>
+              <input type="text" name="" id=""required class=" inputbar1"><br> 
+            </div>
+            <div class="col-md-6  ">
+              <label for="">Last Name <a href=""> *</a></label><br>
+              <input type="text" name="" id="" required  class="inputbar1"><br>
+            </div>
           </div>  
-      
-      <div class="email">
-        <label for="" >Message <a href=""> *</a> </label><br>
-        <textarea name="" id="" rows="5" cols="88" class="msg"></textarea><br>
+              <div class="email">
+                <label for="">Email Address <a href=""> *</a></label><br>
+                <input type="email" name="" id="" required class="inputbar2"><br>
+              </div>
+            <div class="email ">
+              <label for="">Query Type <a href=""> *</a></label><br>
+              <div style="display: flex; " class=" flex-md-column flex-sm-column flex-lg-row">
+                  <div class="query col-md-6  ">
+                      <input type="radio" name="" id="" value="General Enquiry" class="inputbar3"> General Inquiry
+                    </div>
+                    <div class="query col-md-6 ">
+                      <input type="radio" name="" id="" value="Support Request" class="inputbar3"> Support Request <br>
+                    </div>
+                    </div>
+                </div>  
+            
+            <div class="email">
+              <label for="" >Message <a href=""> *</a> </label><br>
+              <textarea name="" id="" rows="5" cols="88" class="msg"></textarea><br>
+            </div>
+            <div class="email">
+              <input type="checkbox" name="" id="">I consent to being contacted by the team <a href=""> *</a> <br>
+            </div>
+            <div class="email">
+            
+              <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
       </div>
-      <div class="email">
-        <input type="checkbox" name="" id="">I consent to being contacted by the team <a href=""> *</a> <br>
       </div>
-      <div class="email">
-       
-        <button type="submit" class="btn">Submit</button>
-      </div>
-  </form>
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
 </body>
 </html>
