@@ -12,26 +12,100 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .inputbar1{
+      height: 35px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1px solid rgba(10, 235, 160, 0.464);
+    }
+    .inputbar2 {
+      height: 35px;
+      width: 95%;
+      border-radius: 5px;
+      border: 1px solid rgba(10, 235, 160, 0.464);
+    }
+    .inputbar3 {
+      height: 12px;
+      width: 12px;
+      border-radius: 10px;
+      border:1px solid rgba(10, 235, 160, 0.464);
+    }
+    body{
+      background-color: rgba(10, 235, 160, 0.464);
+    }
+    .container{
+      width: 50%;
+      height: 500px;
+      background-color: white;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+    }
+    .btn{
+      background-color: green;
+      color: white;
+      height: 25px;
+      width: 500px;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    .name {
+      display: flex;
+      justify-content: space-between;
+
+    }
+    .query{
+      border: 2px solid rgba(10, 235, 160, 0.464);
+      height: 20px;
+      width: 250px;
+      
+    }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <h1>Contact Us</h1>
-<form action="">
-  <label for="">First Name *</label><br>
-  <input type="text" name="" id=""required> <br>
-  <label for="">Last Name *</label><br>
-  <input type="text" name="" id="" required><br>
-  <label for="">Email Address *</label><br>
-  <input type="email" name="" id="" required><br>
-  <label for="">Query Type *</label><br>
-  <input type="checkbox" name="" id="" value="General Enquiry"> General Inquiry
-  <input type="checkbox" name="" id="" value="Support Request"> Support Request <br>
-  <label for="">Message *</label><br>
-  <textarea name="" id=""></textarea><br>
-  <input type="checkbox" name="" id="">I consent to being contacted by the team <br>
-  <button type="submit">Submit</button>
-</form>
+  
+  <form action="">
+    <h1>Contact Us</h1>
+    <div class="name ">
+      <div>
+        <label for="">First Name *</label><br>
+        <input type="text" name="" id=""required class=" inputbar1"><br> 
+      </div>
+      <div>
+        <label for="">Last Name *</label><br>
+        <input type="text" name="" id="" required  class="inputbar1"><br>
+      </div>
+    </div>  
+        <div>
+          <label for="">Email Address *</label><br>
+          <input type="email" name="" id="" required class="inputbar2"><br>
+        </div>
+      <div>
+        <label for="">Query Type *</label><br>
+        <div style="display: flex;">
+            <div class="query">
+                <input type="radio" name="" id="" value="General Enquiry" class="inputbar3"> General Inquiry
+              </div>
+              <div class="query">
+                <input type="radio" name="" id="" value="Support Request" class="inputbar3"> Support Request <br>
+              </div>
+              </div>
+          </div>  
+      
+      <div>
+        <label for="">Message *</label><br>
+        <textarea name="" id="" rows="5" cols="80"></textarea><br>
+      </div>
+      <div>
+        <input type="checkbox" name="" id="">I consent to being contacted by the team <br>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+  </form>
+</div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
